@@ -120,3 +120,7 @@ def predict_churn(data: ChurnRequest):
 
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+        
+@app.get("/")
+def root():
+    return {"message": "MLOps Churn API is running."}
